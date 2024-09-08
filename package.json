@@ -1,0 +1,28 @@
+{
+  "name": "ashley-d-von-react-showcase",
+  "version": "1.0.0",
+  "description": "A React portfolio project",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "start": "vite",
+    "build": "vite build",
+    "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.26.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/preset-react": "^7.24.7",
+    "@vitejs/plugin-react": "^4.3.1",
+    "babel-loader": "^9.1.3",
+    "eslint": "^8.0.0",
+    "vite": "^5.4.3"
+  },
+  "author": "Ashley D Von",
+  "license": "MIT"
+}
