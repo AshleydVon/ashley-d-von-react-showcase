@@ -116,3 +116,32 @@ main {
 section {
   margin-bottom: 40px;
 }
+
+/* Project Grid Layout */
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.project-column {
+  flex: 1;
+  min-width: 300px;
+}
+
+.project {
+  margin-bottom: 20px;
+}
+
+.project h3 {
+  margin-top: 0;
+}
+
+.project ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.project ul li {
+  margin-bottom: 10px;
+}
