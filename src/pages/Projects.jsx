@@ -1,17 +1,31 @@
 import React from 'react';
+import projectsImage from '@/assets/images/salah-ait-mokhtar-y7QJpueJX18-unsplash.jpg';
 
-const Projects = () => {
-    return (
-        <section id="projects">
-            <h2>My Projects</h2>
-            {/* Content for Projects */}
-            <ul>
-                <li>Project 1: React Portfolio</li>
-                <li>Project 2: E-commerce Website</li>
-                <li>Project 3: Weather App</li>
-            </ul>
+function Projects() {
+  return (
+    <div className="projects">
+      <header className="hero">
+        <img src={projectsImage} alt="Projects header" className="hero-image" />
+        <div className="hero-content">
+          <h1>My Projects</h1>
+        </div>
+      </header>
+      <main>
+        <section>
+          <h2>Project List</h2>
+          <div className="project">
+            <h3>Project 1</h3>
+            <p>Description of project 1</p>
+          </div>
+          <div className="project">
+            <h3>Project 2</h3>
+            <p>Description of project 2</p>
+          </div>
+          {/* Add more projects */}
         </section>
-    );
-};
+      </main>
+    </div>
+  );
+}
 
 export default Projects;

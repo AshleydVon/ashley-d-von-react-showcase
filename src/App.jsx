@@ -1,7 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import Loader from './components/Loader.jsx';
-import ScrollToTop from './components/ScrollToTop.jsx';
 import Home from './pages/Home.jsx';
 import Projects from './pages/Projects.jsx';
 import Skills from './pages/Skills.jsx';
@@ -9,7 +7,7 @@ import Skills from './pages/Skills.jsx';
 function App() {
   return (
     <Router>
-      <div>
+      <div className="App">
         <nav>
           <ul>
             <li><Link to="/">Home</Link></li>
@@ -18,8 +16,6 @@ function App() {
           </ul>
         </nav>
 
-        <ScrollToTop />
-        
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
