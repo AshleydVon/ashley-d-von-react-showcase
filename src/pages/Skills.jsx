@@ -1,5 +1,7 @@
+// Skills.jsx
 import React from 'react';
-import skillsImage from '../assets/images/salah-ait-mokhtar-y7QJpueJX18-unsplash.jpg';
+// Correct the path and file name for the image
+import skillsImage from '../assets/images/paulina-milde-jachowska-XO9WoYVtf3w-unsplash.jpg';
 
 function Skills() {
   return (
