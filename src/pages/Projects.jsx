@@ -1,154 +1,145 @@
 import React from 'react';
-import projectsImage from '@/assets/images/salah-ait-mokhtar-y7QJpueJX18-unsplash.jpg';
+
+import projectsImage from '../assets/images/salah-ait-mokhtar-y7QJpueJX18-unsplash.jpg';
+import { Container, Row, Col, Card, Button, Navbar, Nav } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Projects() {
+  const projects = [
+    {
+      title: "J.A.T.E. (Just Another Text Editor)",
+      description: "J.A.T.E. is a Progressive Web Application (PWA) that functions as a text editor within the browser. It supports offline functionality and uses IndexedDB for data persistence, allowing users to create and save notes or code snippets even without an internet connection.",
+      technologies: "Node.js, Express.js, IndexedDB, idb, Webpack, WebpackPwaManifest, Workbox, dotenv",
+      github: "https://github.com/AshleydVon/Editorium-PWA",
+      demo: "https://editorium-pwa-10.onrender.com"
+    },
+    {
+      title: "Crowdfunding Platform",
+      description: "This is a crowdfunding web application where users can create, view, and fund projects. Built using Node.js, Express.js, Sequelize ORM, and Handlebars.js, it features user authentication, project management, and funding capabilities.",
+      technologies: "Node.js, Express.js, Sequelize ORM, PostgreSQL, Handlebars.js, bcrypt, express-session, dotenv",
+      github: "https://github.com/AshleydVon/crowdfunding-platform",
+      demo: "http://localhost:3001"
+    },
+    {
+      title: "Sorting Algorithms",
+      description: "Implementations of various sorting algorithms including Bubble Sort, Quick Sort, and Merge Sort. This project demonstrates proficiency in algorithm design and code efficiency.",
+      technologies: "JavaScript",
+      github: "https://github.com/AshleydVon/sorting-algorithms",
+      demo: null
+    },
+    {
+      title: "E-Commerce Back-End",
+      description: "This project builds the back end for an e-commerce site with Express.js and Sequelize, interfacing with a PostgreSQL database to handle categories, products, and tags.",
+      technologies: "Node.js, Express.js, Sequelize, PostgreSQL, dotenv",
+      github: "https://github.com/AshleydVon/-E-Commerce-Back-End",
+      demo: "https://github.com/AshleydVon/-E-Commerce-Back-End"
+    },
+    {
+      title: "Understanding Email Validation Regex",
+      description: "A tutorial breaking down a regex used for validating email addresses. It covers components like anchors, quantifiers, character classes, and more.",
+      technologies: "Regular Expressions",
+      github: "https://gist.github.com/AshleydVon/c5a529302e78a7aca20a25413f42a949",
+      demo: null
+    },
+    {
+      title: "README Generator",
+      description: "A command-line application that generates a professional README.md file based on user input. This tool aids developers in creating well-structured project documentation.",
+      technologies: "Node.js, Inquirer, Jest",
+      github: "https://github.com/AshleydVon/README",
+      demo: "https://ashleydvon.github.io/README/"
+    },
+    {
+      title: "Thought Stream API",
+      description: "A scalable social network API that allows users to share thoughts, react to posts, and manage friend lists, built with Node.js, Express.js, MongoDB, and Mongoose.",
+      technologies: "Node.js, Express.js, MongoDB, Mongoose, bcrypt, express-session, dotenv",
+      github: "https://github.com/AshleydVon/thought-connect-api",
+      demo: "https://www.loom.com/share/d605c948e0764844bba482b07e38afb1?sid=8e294bf8-6c08-4c33-ab34-40af2ba6fe0e"
+    },
+    {
+      title: "The Tech Blog",
+      description: "A CMS-style blog site where developers can publish posts and comment on others' posts, utilizing MVC, Handlebars.js, Sequelize, and express-session for authentication.",
+      technologies: "Node.js, Express.js, PostgreSQL, Sequelize ORM, Handlebars.js, express-session",
+      github: "https://github.com/AshleydVon/the-tech-blog",
+      demo: null
+    },
+    {
+      title: "SVG Logo Maker",
+      description: "A Node.js command-line application that generates an SVG logo based on user input for text, shape, and colors.",
+      technologies: "Node.js, Inquirer, Jest",
+      github: "https://github.com/AshleydVon/SVG-Logo-Maker",
+      demo: "https://ashleydvon.github.io/SVG-Logo-Maker/"
+    },
+    {
+      title: "TravelWise",
+      description: "The Travel Weather App provides weather information and tourist activities for a specified location. Users can enter a location and date range to get forecasts and explore local activities. Includes search history functionality.",
+      technologies: "HTML, CSS, JavaScript, OpenWeatherMap API, Visual Crossing Weather API, Amadeus API, Unsplash API, Foundation framework",
+      github: "https://github.com/AshleydVon/TravelWise",
+      demo: "https://ashleydvon.github.io/TravelWise/"
+    }
+  ];
+
   return (
     <div className="projects">
+      <Navbar expand="lg" className="navbar-custom py-3">
+        <Container>
+          <Navbar.Brand href="/">Ashley D Von</Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
+            <Nav className="ms-auto">
+              <Nav.Link href="/">Home</Nav.Link>
+              <Nav.Link href="/projects">Projects</Nav.Link>
+              <Nav.Link href="/skills">Skills</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+
       <header className="hero">
         <img src={projectsImage} alt="Projects header" className="hero-image" />
         <div className="hero-content">
           <h1>My Projects</h1>
         </div>
       </header>
+
       <main>
-        <section>
-          <h2>Project List</h2>
-          <div className="project-grid">
-            <div className="project-column">
-              <div className="project">
-                <h3>J.A.T.E. (Just Another Text Editor)</h3>
-                <p>
-                  J.A.T.E. is a Progressive Web Application (PWA) that functions as a text editor within the browser. 
-                  It supports offline functionality and uses IndexedDB for data persistence, allowing users to create 
-                  and save notes or code snippets even without an internet connection.
-                </p>
-                <ul>
-                  <li><strong>Technologies Used:</strong> Node.js, Express.js, IndexedDB, idb, Webpack, WebpackPwaManifest, Workbox, dotenv</li>
-                  <li><a href="https://github.com/AshleydVon/Editorium-PWA" target="_blank" rel="noopener noreferrer">GitHub Repository</a></li>
-                  <li><a href="https://editorium-pwa-10.onrender.com" target="_blank" rel="noopener noreferrer">Live Demo</a></li>
-                </ul>
-              </div>
-
-              <div className="project">
-                <h3>Crowdfunding Platform</h3>
-                <p>
-                  This is a crowdfunding web application where users can create, view, and fund projects. Built using Node.js, 
-                  Express.js, Sequelize ORM, and Handlebars.js, it features user authentication, project management, and funding 
-                  capabilities.
-                </p>
-                <ul>
-                  <li><strong>Technologies Used:</strong> Node.js, Express.js, Sequelize ORM, PostgreSQL, Handlebars.js, bcrypt, express-session, dotenv</li>
-                  <li><a href="https://github.com/AshleydVon/crowdfunding-platform" target="_blank" rel="noopener noreferrer">GitHub Repository</a></li>
-                  <li><a href="http://localhost:3001" target="_blank" rel="noopener noreferrer">Live Demo (Local)</a></li>
-                </ul>
-              </div>
-
-              <div className="project">
-                <h3>Sorting Algorithms</h3>
-                <p>
-                  Implementations of various sorting algorithms including Bubble Sort, Quick Sort, and Merge Sort. This project 
-                  demonstrates proficiency in algorithm design and code efficiency.
-                </p>
-                <ul>
-                  <li><strong>Technologies Used:</strong> JavaScript</li>
-                  <li><a href="https://github.com/AshleydVon/sorting-algorithms" target="_blank" rel="noopener noreferrer">GitHub Repository</a></li>
-                </ul>
-              </div>
-
-              <div className="project">
-                <h3>E-Commerce Back-End</h3>
-                <p>
-                  This project builds the back end for an e-commerce site with Express.js and Sequelize, interfacing with a 
-                  PostgreSQL database to handle categories, products, and tags.
-                </p>
-                <ul>
-                  <li><strong>Technologies Used:</strong> Node.js, Express.js, Sequelize, PostgreSQL, dotenv</li>
-                  <li><a href="https://github.com/AshleydVon/-E-Commerce-Back-End" target="_blank" rel="noopener noreferrer">GitHub Repository</a></li>
-                  <li><a href="https://github.com/AshleydVon/-E-Commerce-Back-End" target="_blank" rel="noopener noreferrer">Live Demo (Local)</a></li>
-                </ul>
-              </div>
-
-              <div className="project">
-                <h3>Understanding Email Validation Regex</h3>
-                <p>
-                  A tutorial breaking down a regex used for validating email addresses. It covers components like anchors, 
-                  quantifiers, character classes, and more.
-                </p>
-                <ul>
-                  <li><strong>Technologies Used:</strong> Regular Expressions</li>
-                  <li><a href="https://gist.github.com/AshleydVon/c5a529302e78a7aca20a25413f42a949" target="_blank" rel="noopener noreferrer">Full Gist</a></li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="project-column">
-              <div className="project">
-                <h3>README Generator</h3>
-                <p>
-                  A command-line application that generates a professional README.md file based on user input. This tool aids 
-                  developers in creating well-structured project documentation.
-                </p>
-                <ul>
-                  <li><strong>Technologies Used:</strong> Node.js, Inquirer, Jest</li>
-                  <li><a href="https://github.com/AshleydVon/README" target="_blank" rel="noopener noreferrer">GitHub Repository</a></li>
-                  <li><a href="https://ashleydvon.github.io/README/" target="_blank" rel="noopener noreferrer">Live Demo</a></li>
-                </ul>
-              </div>
-
-              <div className="project">
-                <h3>Thought Stream API</h3>
-                <p>
-                  A scalable social network API that allows users to share thoughts, react to posts, and manage friend lists, 
-                  built with Node.js, Express.js, MongoDB, and Mongoose.
-                </p>
-                <ul>
-                  <li><strong>Technologies Used:</strong> Node.js, Express.js, MongoDB, Mongoose, bcrypt, express-session, dotenv</li>
-                  <li><a href="https://github.com/AshleydVon/thought-connect-api" target="_blank" rel="noopener noreferrer">GitHub Repository</a></li>
-                  <li><a href="https://www.loom.com/share/d605c948e0764844bba482b07e38afb1?sid=8e294bf8-6c08-4c33-ab34-40af2ba6fe0e" target="_blank" rel="noopener noreferrer">Walkthrough Video</a></li>
-                </ul>
-              </div>
-
-              <div className="project">
-                <h3>The Tech Blog</h3>
-                <p>
-                  A CMS-style blog site where developers can publish posts and comment on others’ posts, utilizing MVC, Handlebars.js, 
-                  Sequelize, and express-session for authentication.
-                </p>
-                <ul>
-                  <li><strong>Technologies Used:</strong> Node.js, Express.js, PostgreSQL, Sequelize ORM, Handlebars.js, express-session</li>
-                  <li><a href="https://github.com/AshleydVon/the-tech-blog" target="_blank" rel="noopener noreferrer">GitHub Repository</a></li>
-                </ul>
-              </div>
-
-              <div className="project">
-                <h3>SVG Logo Maker</h3>
-                <p>
-                  A Node.js command-line application that generates an SVG logo based on user input for text, shape, and colors.
-                </p>
-                <ul>
-                  <li><strong>Technologies Used:</strong> Node.js, Inquirer, Jest</li>
-                  <li><a href="https://github.com/AshleydVon/SVG-Logo-Maker" target="_blank" rel="noopener noreferrer">GitHub Repository</a></li>
-                  <li><a href="https://ashleydvon.github.io/SVG-Logo-Maker/" target="_blank" rel="noopener noreferrer">Live Demo</a></li>
-                </ul>
-              </div>
-
-              <div className="project">
-                <h3>TravelWise</h3>
-                <p>
-                  The Travel Weather App provides weather information and tourist activities for a specified location. Users can 
-                  enter a location and date range to get forecasts and explore local activities. Includes search history functionality.
-                </p>
-                <ul>
-                  <li><strong>Technologies Used:</strong> HTML, CSS, JavaScript, OpenWeatherMap API, Visual Crossing Weather API, Amadeus API, Unsplash API, Foundation framework</li>
-                  <li><a href="https://github.com/AshleydVon/TravelWise" target="_blank" rel="noopener noreferrer">GitHub Repository</a></li>
-                  <li><a href="https://ashleydvon.github.io/TravelWise/" target="_blank" rel="noopener noreferrer">Live Demo</a></li>
-                  <li><strong>Project Creators:</strong> Ashley Von (@AshleydVon), Florian Suess (@Flo2009), Christopher Chhim (@Christopher-Chhim)</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
+        <Container className="my-5">
+          <h2 className="text-center mb-4">Project List</h2>
+          <Row xs={1} md={2} lg={3} className="g-4">
+            {projects.map((project, index) => (
+              <Col key={index}>
+                <Card className="h-100">
+                  <Card.Body>
+                    <Card.Title>{project.title}</Card.Title>
+                    <Card.Text>{project.description}</Card.Text>
+                    <Card.Text><strong>Technologies:</strong> {project.technologies}</Card.Text>
+                  </Card.Body>
+                  <Card.Footer>
+                    <Button variant="primary" href={project.github} target="_blank" rel="noopener noreferrer" className="me-2">GitHub</Button>
+                    {project.demo && (
+                      <Button variant="secondary" href={project.demo} target="_blank" rel="noopener noreferrer">Live Demo</Button>
+                    )}
+                  </Card.Footer>
+                </Card>
+              </Col>
+            ))}
+          </Row>
+        </Container>
       </main>
+
+      <footer className="footer-custom py-4">
+        <Container>
+          <Row>
+            <Col className="text-center">
+              <p>Connect with me:</p>
+              <ul className="list-unstyled">
+                <li><a href="https://github.com/AshleydVon" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/ashley-von-0600a9239/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                <li><a href="mailto:AshleydVon630@gmail.com">Email: AshleydVon630@gmail.com</a></li>
+              </ul>
+            </Col>
+          </Row>
+        </Container>
+      </footer>
     </div>
   );
 }

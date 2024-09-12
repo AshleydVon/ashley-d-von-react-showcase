@@ -23,7 +23,7 @@ section {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #333;
+  background-color: #B76E79;
   color: white;
   border: none;
   border-radius: 50%;
@@ -42,7 +42,7 @@ section {
 
 .spinner {
   border: 4px solid #f3f3f3;
-  border-top: 4px solid #3498db;
+  border-top: 4px solid #B76E79;
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -54,18 +54,18 @@ section {
   100% { transform: rotate(360deg); }
 }
 
-nav ul {
-  list-style-type: none;
-  padding: 0;
-  display: flex;
-  justify-content: space-around;
-  background-color: #333;
-  padding: 1rem 0;
+/* Custom Navbar styles */
+.navbar-custom {
+  background-color: #B76E79 !important;
 }
 
-nav ul li a {
-  color: white;
-  text-decoration: none;
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+  color: white !important;
+}
+
+.navbar-custom .nav-link:hover {
+  text-decoration: underline;
 }
 
 .hero {
@@ -113,10 +113,6 @@ main {
   padding: 20px;
 }
 
-section {
-  margin-bottom: 40px;
-}
-
 /* Project Grid Layout */
 .project-grid {
   display: flex;
@@ -144,4 +140,87 @@ section {
 
 .project ul li {
   margin-bottom: 10px;
+}
+
+/* Contact Form Styles */
+.contact-form {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #B76E79;
+  outline: none;
+}
+
+.contact-form button {
+  background-color: #B76E79;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #a65c69;
+}
+
+/* Resume Section Styles */
+.resume-section {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.resume-section a {
+  color: #B76E79;
+  text-decoration: none;
+}
+
+.resume-section a:hover {
+  text-decoration: underline;
+}
+
+.resume-section ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.resume-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Custom footer styles */
+.footer-custom {
+  background-color: #B76E79;
+  color: white;
+}
+
+.footer-custom a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-custom a:hover {
+  text-decoration: underline;
 }
