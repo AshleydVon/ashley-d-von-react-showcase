@@ -1,14 +1,15 @@
 import React from 'react';
 import { Container, ListGroup, Button, Navbar, Nav } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../index.css';
 
 function Resume() {
   const openResume = () => {
-    // This will open the PDF in a new tab
-    window.open('/Profile-2.pdf', '_blank');
+    window.open('https://bold.pro/my/ashley-d-von-resume', '_blank');
   };
 
   return (
-    <div className="resume">
+    <div className="resume page-container">
       <Navbar expand="lg" className="navbar-custom py-3">
         <Container>
           <Navbar.Brand href="/">Ashley D Von</Navbar.Brand>
@@ -25,32 +26,49 @@ function Resume() {
         </Container>
       </Navbar>
 
-      <Container className="mt-5">
-        <h2>My Resume</h2>
-        <p>View my resume here:</p>
-        <Button onClick={openResume} variant="primary">
-          View Resume
-        </Button>
-        <h3 className="mt-4">Proficiencies</h3>
-        <ListGroup>
-          <ListGroup.Item>HTML</ListGroup.Item>
-          <ListGroup.Item>CSS (Bootstrap, Tailwind)</ListGroup.Item>
-          <ListGroup.Item>JavaScript (ES6+)</ListGroup.Item>
-          <ListGroup.Item>React</ListGroup.Item>
-          <ListGroup.Item>Node.js</ListGroup.Item>
-          <ListGroup.Item>Express</ListGroup.Item>
-          <ListGroup.Item>MongoDB</ListGroup.Item>
-        </ListGroup>
-      </Container>
+      <main className="resume-content"> {/* Added main wrapper with class */}
+        <Container className="mt-5">
+          <h2>My Resume</h2>
+          <p>View my resume here:</p>
+          <Button 
+            onClick={openResume} 
+            variant="primary" 
+            style={{ 
+              backgroundColor: 'var(--neon-purple)',
+              borderColor: 'var(--bright-blue)',
+              marginBottom: '2rem'
+            }}
+          >
+            View Resume
+          </Button>
+
+          <h3 className="mt-4">Proficiencies</h3>
+          <ListGroup>
+            <ListGroup.Item className="list-item">HTML</ListGroup.Item>
+            <ListGroup.Item className="list-item">CSS (Bootstrap, Tailwind)</ListGroup.Item>
+            <ListGroup.Item className="list-item">JavaScript (ES6+)</ListGroup.Item>
+            <ListGroup.Item className="list-item">React</ListGroup.Item>
+            <ListGroup.Item className="list-item">Node.js</ListGroup.Item>
+            <ListGroup.Item className="list-item">Express</ListGroup.Item>
+            <ListGroup.Item className="list-item">MongoDB</ListGroup.Item>
+          </ListGroup>
+        </Container>
+      </main>
 
       <footer className="footer-custom py-4 mt-5">
         <Container>
           <div className="text-center">
             <p>Connect with me:</p>
             <ul className="list-unstyled">
-              <li><a href="https://github.com/AshleydVon" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-              <li><a href="https://www.linkedin.com/in/ashley-von-0600a9239/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-              <li><a href="mailto:AshleydVon630@gmail.com">Email: AshleydVon630@gmail.com</a></li>
+              <li>
+                <a href="https://github.com/AshleydVon" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/ashley-von-0600a9239/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              </li>
+              <li>
+                <a href="mailto:AshleydVon630@gmail.com">Email: AshleydVon630@gmail.com</a>
+              </li>
             </ul>
           </div>
         </Container>

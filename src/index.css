@@ -1,8 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Ribeye+Marrow&display=swap');
+
+:root {
+  --pink: #FF4ECD;
+  --bright-blue: #4EDFFF;
+  --dark-purple: #1E0036;
+  --neon-purple: #9B51E0;
+  --white: #FFFFFF;
+  --black: #000000;
+  --light-black: #1a1a1a;
+}
+
 body {
   margin: 0;
-  font-family: 'Fira Sans', sans-serif;
-  background-color: #f0f0f0;
-  color: #333;
+  font-family: 'Ribeye Marrow', serif;
+  background-color: var(--light-black);
+  color: var(--white);
 }
 
 #root {
@@ -11,216 +23,205 @@ body {
   min-height: 100vh;
 }
 
-section {
-  padding: 2rem;
-  margin: 1rem 0;
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+/* Add animation for page-container */
+.page-container {
+  animation: fadeIn 1s ease-in-out;
 }
 
-#scrollToTopBtn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #B76E79;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  font-size: 20px;
-  cursor: pointer;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-#loader {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.spinner {
-  border: 4px solid #f3f3f3;
-  border-top: 4px solid #B76E79;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-/* Custom Navbar styles */
 .navbar-custom {
-  background-color: #B76E79 !important;
+  background-color: var(--neon-purple) !important;
 }
 
 .navbar-custom .navbar-brand,
 .navbar-custom .nav-link {
-  color: white !important;
+  color: var(--white) !important;
+  font-size: 1.2rem;
 }
 
 .navbar-custom .nav-link:hover {
+  color: var(--bright-blue) !important;
   text-decoration: underline;
 }
 
 .hero {
-  position: relative;
-  width: 100%;
-  height: 50vh;
-  min-height: 300px;
-  overflow: hidden;
-}
-
-.hero-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.hero-content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  background-color: var(--dark-purple);
+  padding: 4rem 0;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  text-align: center;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 20px;
+  justify-content: center;
+  position: relative;
+  animation: fadeIn 2s ease-in-out;
 }
 
-.hero-content h1 {
-  font-size: 2.5rem;
+.hero h1 {
+  font-size: 3rem;
+  color: var(--pink);
   margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 2;
 }
 
-.hero-content p {
+.hero p {
   font-size: 1.2rem;
+  color: var(--white);
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-25deg);
+  z-index: 1;
+  opacity: 0.2;
+  box-shadow: 2px 2px 5px rgba(78, 223, 255, 0.7);
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
 }
 
 main {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
+  background-color: var(--light-black);
+  padding: 4rem 0;
 }
 
-/* Project Grid Layout */
-.project-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.project-column {
-  flex: 1;
-  min-width: 300px;
-}
-
-.project {
-  margin-bottom: 20px;
-}
-
-.project h3 {
-  margin-top: 0;
-}
-
-.project ul {
-  padding-left: 0;
-  list-style-type: none;
-}
-
-.project ul li {
-  margin-bottom: 10px;
-}
-
-/* Contact Form Styles */
-.contact-form {
-  background-color: white;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.contact-form label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: bold;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 0.5rem;
+h2 {
+  color: var(--pink);
+  font-size: 2.5rem;
   margin-bottom: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: #B76E79;
-  outline: none;
+h3 {
+  color: var(--pink);
+  font-size: 2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.contact-form button {
-  background-color: #B76E79;
-  color: white;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 4px;
-  cursor: pointer;
+.personal-image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 20px var(--neon-purple);
+  margin-bottom: 2rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.contact-form button:hover {
-  background-color: #a65c69;
-}
-
-/* Resume Section Styles */
-.resume-section {
-  background-color: white;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.resume-section a {
-  color: #B76E79;
-  text-decoration: none;
-}
-
-.resume-section a:hover {
-  text-decoration: underline;
-}
-
-.resume-section ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-.resume-section ul li {
-  margin-bottom: 0.5rem;
-}
-
-/* Custom footer styles */
 .footer-custom {
-  background-color: #B76E79;
-  color: white;
+  background-color: var(--neon-purple);
+  color: var(--white);
 }
 
 .footer-custom a {
-  color: white;
+  color: var(--bright-blue);
   text-decoration: none;
 }
 
 .footer-custom a:hover {
   text-decoration: underline;
+  color: var(--pink);
+}
+
+@media (min-width: 768px) {
+  .about-section {
+    display: flex;
+    align-items: center;
+  }
+  .about-section .personal-image {
+    flex: 0 0 300px;
+    margin-right: 2rem;
+  }
+  .about-section .about-content {
+    flex: 1;
+  }
+}
+
+.form-control {
+  background-color: var(--light-black);
+  color: var(--white);
+  border-color: var(--neon-purple);
+}
+
+.skills-page {
+  padding: 2rem;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.skills-list {
+  margin-top: 2rem;
+}
+
+.skill {
+  padding: 1rem;
+  background-color: var(--dark-purple);
+  margin: 0.5rem 0;
+  border-radius: 5px;
+  color: var(--white);
+  transition: background-color 0.3s;
+}
+
+.skill:hover {
+  background-color: var(--neon-purple);
+}
+
+.list-item {
+  background-color: var(--dark-purple);
+  color: var(--white);
+  transition: background-color 0.3s;
+}
+
+.list-item:hover {
+  background-color: var(--neon-purple);
+}
+/* Add these styles to your existing index.css */
+
+.resume {
+  background-color: var(--light-black);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.resume-content {
+  flex: 1;
+  background-color: var(--light-black);
+  padding: 2rem 0;
+}
+
+/* Style the button hover state */
+.btn-primary:hover {
+  background-color: var(--bright-blue) !important;
+  border-color: var(--neon-purple) !important;
+  color: var(--dark-purple) !important;
+}
+
+/* Ensure list items maintain dark background */
+.resume .list-item {
+  background-color: var(--dark-purple);
+  color: var(--white);
+  border: 1px solid var(--neon-purple);
+  margin-bottom: 0.5rem;
+}
+
+.resume .list-item:hover {
+  background-color: var(--neon-purple);
+  color: var(--white);
 }

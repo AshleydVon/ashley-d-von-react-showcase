@@ -1,6 +1,4 @@
 import React from 'react';
-
-import projectsImage from '../assets/images/salah-ait-mokhtar-y7QJpueJX18-unsplash.jpg';
 import { Container, Row, Col, Card, Button, Navbar, Nav } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -18,7 +16,6 @@ function Projects() {
       description: "This is a crowdfunding web application where users can create, view, and fund projects. Built using Node.js, Express.js, Sequelize ORM, and Handlebars.js, it features user authentication, project management, and funding capabilities.",
       technologies: "Node.js, Express.js, Sequelize ORM, PostgreSQL, Handlebars.js, bcrypt, express-session, dotenv",
       github: "https://github.com/AshleydVon/crowdfunding-platform",
-      demo: "http://localhost:3001"
     },
     {
       title: "Sorting Algorithms",
@@ -93,14 +90,12 @@ function Projects() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-
       <header className="hero">
-        <img src={projectsImage} alt="Projects header" className="hero-image" />
+    
         <div className="hero-content">
           <h1>My Projects</h1>
         </div>
       </header>
-
       <main>
         <Container className="my-5">
           <h2 className="text-center mb-4">Project List</h2>
@@ -125,7 +120,6 @@ function Projects() {
           </Row>
         </Container>
       </main>
-
       <footer className="footer-custom py-4">
         <Container>
           <Row>

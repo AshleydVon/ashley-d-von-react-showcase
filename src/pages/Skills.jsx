@@ -1,6 +1,4 @@
 import React from 'react';
-
-import skillsImage from '../assets/images/paulina-milde-jachowska-XO9WoYVtf3w-unsplash.jpg';
 import { Container, Row, Col, ListGroup, Navbar, Nav } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -20,7 +18,7 @@ function Skills() {
   const rightColumnSkills = skillsList.slice(midpoint);
 
   return (
-    <div className="skills">
+    <div className="skills-page"> {/* Added class for animation */}
       <Navbar expand="lg" className="navbar-custom py-3">
         <Container>
           <Navbar.Brand href="/">Ashley D Von</Navbar.Brand>
@@ -34,14 +32,6 @@ function Skills() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-
-      <header className="hero">
-        <img src={skillsImage} alt="Skills header" className="hero-image" />
-        <div className="hero-content">
-          <h1>My Skills</h1>
-        </div>
-      </header>
-
       <main>
         <Container className="my-5">
           <h2 className="text-center mb-4">Skills List</h2>
@@ -63,7 +53,6 @@ function Skills() {
           </Row>
         </Container>
       </main>
-
       <footer className="footer-custom py-4">
         <Container>
           <Row>
