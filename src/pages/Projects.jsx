@@ -76,12 +76,12 @@ function Projects() {
   ];
 
   return (
-    <div className="projects">
-      <Navbar expand="lg" className="navbar-custom py-3">
+    <div className="projects-page">
+      <Navbar expand="lg" className="navbar-custom">
         <Container>
           <Navbar.Brand href="/">Ashley D Von</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
+          <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
               <Nav.Link href="/">Home</Nav.Link>
               <Nav.Link href="/projects">Projects</Nav.Link>
@@ -90,28 +90,37 @@ function Projects() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
+
       <header className="hero">
-    
-        <div className="hero-content">
-          <h1>My Projects</h1>
-        </div>
+        <Container>
+          <div className="hero-content text-center">
+            <h1>My Projects</h1>
+            <p>A collection of my development work</p>
+          </div>
+        </Container>
       </header>
-      <main>
-        <Container className="my-5">
-          <h2 className="text-center mb-4">Project List</h2>
+
+      <main className="projects-main">
+        <Container>
           <Row xs={1} md={2} lg={3} className="g-4">
             {projects.map((project, index) => (
               <Col key={index}>
-                <Card className="h-100">
+                <Card className="project-card h-100">
                   <Card.Body>
-                    <Card.Title>{project.title}</Card.Title>
+                    <Card.Title className="project-title">{project.title}</Card.Title>
                     <Card.Text>{project.description}</Card.Text>
-                    <Card.Text><strong>Technologies:</strong> {project.technologies}</Card.Text>
+                    <div className="technologies">
+                      <strong>Technologies:</strong> {project.technologies}
+                    </div>
                   </Card.Body>
-                  <Card.Footer>
-                    <Button variant="primary" href={project.github} target="_blank" rel="noopener noreferrer" className="me-2">GitHub</Button>
+                  <Card.Footer className="project-footer">
+                    <Button variant="primary" href={project.github} target="_blank" rel="noopener noreferrer" className="me-2">
+                      GitHub
+                    </Button>
                     {project.demo && (
-                      <Button variant="secondary" href={project.demo} target="_blank" rel="noopener noreferrer">Live Demo</Button>
+                      <Button variant="secondary" href={project.demo} target="_blank" rel="noopener noreferrer">
+                        Live Demo
+                      </Button>
                     )}
                   </Card.Footer>
                 </Card>
@@ -120,7 +129,8 @@ function Projects() {
           </Row>
         </Container>
       </main>
-      <footer className="footer-custom py-4">
+
+      <footer className="footer-custom">
         <Container>
           <Row>
             <Col className="text-center">

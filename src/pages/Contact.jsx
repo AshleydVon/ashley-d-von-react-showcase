@@ -34,7 +34,7 @@ function Contact() {
   };
 
   return (
-    <div className="contact">
+    <div className="contact page-container">
       <Navbar expand="lg" className="navbar-custom py-3">
         <Container>
           <Navbar.Brand href="/">Ashley D Von</Navbar.Brand>
@@ -52,7 +52,7 @@ function Contact() {
       </Navbar>
 
       <Container className="mt-5">
-        <h2>Contact Me</h2>
+        <h2 className="section-title text-center">Contact Me</h2>
         {showAlert && <Alert variant="success">Your message has been sent!</Alert>}
         <Form onSubmit={handleSubmit}>
           <Form.Group controlId="formName">

@@ -1,17 +1,17 @@
 import React from 'react';
 import personalImage from '../assets/images/Pic.png';
 import logo from '../assets/images/Logo.png';
-import { Container, Row, Col, Navbar, Nav } from 'react-bootstrap';
+import { Container, Row, Col, Navbar, Nav, Card } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Home() {
   return (
-    <div className="home page-container"> {/* Added page-container class for animation */}
-      <Navbar expand="lg" className="navbar-custom py-3">
+    <div className="home-page">
+      <Navbar expand="lg" className="navbar-custom">
         <Container>
           <Navbar.Brand href="/">Ashley D Von</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
+          <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
               <Nav.Link href="/">Home</Nav.Link>
               <Nav.Link href="/projects">Projects</Nav.Link>
@@ -22,59 +22,62 @@ function Home() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
+
       <header className="hero">
-        <img src={logo} alt="Logo" className="logo" />
+        <img src={logo} alt="Logo" className="logo animated-logo" />
         <Container>
-          <Row className="align-items-center">
-            <Col md={12} className="text-center">
-              <div className="text-container d-flex align-items-center justify-content-center mb-4"> 
-                <h1 className="ms-3">Welcome to My Portfolio</h1> 
-              </div>
-              <p>
-                Hello! I'm Ashley D Von, a dedicated full stack developer
-                specializing in creating efficient, scalable, and user-friendly web
-                applications. My focus is on solving complex problems with creative
-                technical solutions.
-              </p>
-            </Col>
-          </Row>
+          <div className="hero-content text-center">
+            <h1 className="welcome-title">Welcome to My Portfolio</h1>
+            <p className="hero-text">
+              Hello! I'm Ashley D Von, a dedicated full stack developer
+              specializing in creating efficient, scalable, and user-friendly web
+              applications. My focus is on solving complex problems with creative
+              technical solutions.
+            </p>
+          </div>
         </Container>
       </header>
-      <main>
+
+      <main className="home-main">
         <Container>
-          <Row className="align-items-center">
-            <Col md={6} className="order-md-2">
-              <img
-                src={personalImage}
-                alt="Ashley D Von"
-                className="personal-image mx-auto"
-              />
-            </Col>
-            <Col md={6} className="order-md-1">
-              <section className="my-5">
-                <h2>About Me</h2>
-                <p>
-                  I have a steadfast belief that the pursuit of knowledge and the
-                  persistence to grow are key elements to success in the tech
-                  industry. I combine and build upon my skills and versatility to
-                  create innovative, user-focused solutions. As a passionate full
-                  stack developer, I strive to be the best I can be, continuously
-                  expanding my expertise and pushing the boundaries of what's
-                  possible. My commitment to connecting with others and embracing
-                  new ideas drives my commitment to the success of every project I
-                  work on, ensuring that I deliver high-quality, impactful results.
-                </p>
-              </section>
-            </Col>
-          </Row>
+          <Card className="about-card">
+            <Row className="g-0">
+              <Col md={6} className="image-column">
+                <div className="image-wrapper">
+                  <img
+                    src={personalImage}
+                    alt="Ashley D Von"
+                    className="personal-image"
+                  />
+                </div>
+              </Col>
+              <Col md={6} className="content-column">
+                <Card.Body className="about-content">
+                  <h2 className="section-title">About Me</h2>
+                  <p className="about-text">
+                    I have a steadfast belief that the pursuit of knowledge and the
+                    persistence to grow are key elements to success in the tech
+                    industry. I combine and build upon my skills and versatility to
+                    create innovative, user-focused solutions. As a passionate full
+                    stack developer, I strive to be the best I can be, continuously
+                    expanding my expertise and pushing the boundaries of what's
+                    possible. My commitment to connecting with others and embracing
+                    new ideas drives my commitment to the success of every project I
+                    work on, ensuring that I deliver high-quality, impactful results.
+                  </p>
+                </Card.Body>
+              </Col>
+            </Row>
+          </Card>
         </Container>
       </main>
-      <footer className="footer-custom py-4">
+
+      <footer className="footer-custom">
         <Container>
           <Row>
             <Col className="text-center">
-              <p>Connect with me:</p>
-              <ul className="list-unstyled">
+              <p className="connect-text">Connect with me:</p>
+              <ul className="social-links">
                 <li>
                   <a
                     href="https://github.com/AshleydVon"

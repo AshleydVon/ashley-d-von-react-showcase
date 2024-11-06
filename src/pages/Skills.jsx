@@ -18,7 +18,7 @@ function Skills() {
   const rightColumnSkills = skillsList.slice(midpoint);
 
   return (
-    <div className="skills-page"> {/* Added class for animation */}
+    <div className="skills-page">
       <Navbar expand="lg" className="navbar-custom py-3">
         <Container>
           <Navbar.Brand href="/">Ashley D Von</Navbar.Brand>
@@ -34,7 +34,8 @@ function Skills() {
       </Navbar>
       <main>
         <Container className="my-5">
-          <h2 className="text-center mb-4">Skills List</h2>
+          {/* Updated h2 header with section-title class for consistent font styling */}
+          <h2 className="text-center mb-4 section-title">Skills List</h2>
           <Row>
             <Col md={6}>
               <ListGroup>

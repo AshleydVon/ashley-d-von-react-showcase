@@ -26,10 +26,9 @@ function Resume() {
         </Container>
       </Navbar>
 
-      <main className="resume-content"> {/* Added main wrapper with class */}
+      <main className="resume-content">
         <Container className="mt-5">
-          <h2>My Resume</h2>
-          <p>View my resume here:</p>
+          <h2 className="section-title text-center">My Resume</h2>
           <Button 
             onClick={openResume} 
             variant="primary" 
@@ -42,7 +41,7 @@ function Resume() {
             View Resume
           </Button>
 
-          <h3 className="mt-4">Proficiencies</h3>
+          <h3 className="section-title mt-4">Proficiencies</h3>
           <ListGroup>
             <ListGroup.Item className="list-item">HTML</ListGroup.Item>
             <ListGroup.Item className="list-item">CSS (Bootstrap, Tailwind)</ListGroup.Item>
