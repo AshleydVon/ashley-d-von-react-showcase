@@ -32,10 +32,19 @@ function Skills() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
+
+      {/* Skills Hero Section */}
+      <header className="skills-hero">
+        <Container>
+          <div className="skills-hero-content text-center">
+            <h1 className="section-title">My Skills</h1>
+            <p>Technologies I’ve mastered to build amazing applications</p>
+          </div>
+        </Container>
+      </header>
+
       <main>
         <Container className="my-5">
-          {/* Updated h2 header with section-title class for consistent font styling */}
-          <h2 className="text-center mb-4 section-title">Skills List</h2>
           <Row>
             <Col md={6}>
               <ListGroup>
@@ -54,6 +63,7 @@ function Skills() {
           </Row>
         </Container>
       </main>
+
       <footer className="footer-custom py-4">
         <Container>
           <Row>

@@ -77,6 +77,7 @@ function Projects() {
 
   return (
     <div className="projects-page">
+      {/* Navbar */}
       <Navbar expand="lg" className="navbar-custom">
         <Container>
           <Navbar.Brand href="/">Ashley D Von</Navbar.Brand>
@@ -91,15 +92,17 @@ function Projects() {
         </Container>
       </Navbar>
 
-      <header className="hero">
+      {/* Hero Section */}
+      <header className="projects-hero">
         <Container>
-          <div className="hero-content text-center">
-            <h1>My Projects</h1>
+          <div className="projects-hero-content text-center">
+            <h1 className="section-title">My Projects</h1>
             <p>A collection of my development work</p>
           </div>
         </Container>
       </header>
 
+      {/* Projects List */}
       <main className="projects-main">
         <Container>
           <Row xs={1} md={2} lg={3} className="g-4">
@@ -114,11 +117,22 @@ function Projects() {
                     </div>
                   </Card.Body>
                   <Card.Footer className="project-footer">
-                    <Button variant="primary" href={project.github} target="_blank" rel="noopener noreferrer" className="me-2">
+                    <Button
+                      variant="primary"
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="me-2"
+                    >
                       GitHub
                     </Button>
                     {project.demo && (
-                      <Button variant="secondary" href={project.demo} target="_blank" rel="noopener noreferrer">
+                      <Button
+                        variant="secondary"
+                        href={project.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         Live Demo
                       </Button>
                     )}
@@ -130,15 +144,36 @@ function Projects() {
         </Container>
       </main>
 
+      {/* Footer */}
       <footer className="footer-custom">
         <Container>
           <Row>
             <Col className="text-center">
               <p>Connect with me:</p>
               <ul className="list-unstyled">
-                <li><a href="https://github.com/AshleydVon" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-                <li><a href="https://www.linkedin.com/in/ashley-von-0600a9239/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-                <li><a href="mailto:AshleydVon630@gmail.com">Email: AshleydVon630@gmail.com</a></li>
+                <li>
+                  <a
+                    href="https://github.com/AshleydVon"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    GitHub
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/ashley-von-0600a9239/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    LinkedIn
+                  </a>
+                </li>
+                <li>
+                  <a href="mailto:AshleydVon630@gmail.com">
+                    Email: AshleydVon630@gmail.com
+                  </a>
+                </li>
               </ul>
             </Col>
           </Row>
@@ -147,5 +182,6 @@ function Projects() {
     </div>
   );
 }
+
 
 export default Projects;

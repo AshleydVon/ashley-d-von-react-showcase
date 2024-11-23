@@ -1,5 +1,5 @@
 import React from 'react';
-import personalImage from '../assets/images/Pic.png';
+import personalImage from '../assets/images/Pic.jpeg';
 import logo from '../assets/images/Logo.png';
 import { Container, Row, Col, Navbar, Nav, Card } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -23,10 +23,11 @@ function Home() {
         </Container>
       </Navbar>
 
-      <header className="hero">
-        <img src={logo} alt="Logo" className="logo animated-logo" />
-        <Container>
-          <div className="hero-content text-center">
+      {/* Hero Section */}
+      <div className="hero">
+        <Container className="text-center d-flex flex-column align-items-center">
+          <img src={logo} alt="Logo" className="logo animated-logo mb-3" />
+          <div className="hero-content">
             <h1 className="welcome-title">Welcome to My Portfolio</h1>
             <p className="hero-text">
               Hello! I'm Ashley D Von, a dedicated full stack developer
@@ -36,8 +37,9 @@ function Home() {
             </p>
           </div>
         </Container>
-      </header>
+      </div>
 
+      {/* Main Content */}
       <main className="home-main">
         <Container>
           <Card className="about-card">
@@ -72,6 +74,7 @@ function Home() {
         </Container>
       </main>
 
+      {/* Footer */}
       <footer className="footer-custom">
         <Container>
           <Row>
