@@ -25,14 +25,13 @@ function Resume() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-
       <main className="resume-content">
         <Container className="mt-5">
           <h2 className="section-title text-center">My Resume</h2>
-          <Button 
-            onClick={openResume} 
-            variant="primary" 
-            style={{ 
+          <Button
+            onClick={openResume}
+            variant="primary"
+            style={{
               backgroundColor: 'var(--neon-purple)',
               borderColor: 'var(--bright-blue)',
               marginBottom: '2rem'
@@ -40,20 +39,18 @@ function Resume() {
           >
             View Resume
           </Button>
-
           <h3 className="section-title mt-4">Proficiencies</h3>
           <ListGroup>
-            <ListGroup.Item className="list-item">HTML</ListGroup.Item>
-            <ListGroup.Item className="list-item">CSS (Bootstrap, Tailwind)</ListGroup.Item>
-            <ListGroup.Item className="list-item">JavaScript (ES6+)</ListGroup.Item>
-            <ListGroup.Item className="list-item">React</ListGroup.Item>
-            <ListGroup.Item className="list-item">Node.js</ListGroup.Item>
-            <ListGroup.Item className="list-item">Express</ListGroup.Item>
-            <ListGroup.Item className="list-item">MongoDB</ListGroup.Item>
+            <ListGroup.Item className="skill-item">HTML</ListGroup.Item>
+            <ListGroup.Item className="skill-item">CSS (Bootstrap, Tailwind)</ListGroup.Item>
+            <ListGroup.Item className="skill-item">JavaScript (ES6+)</ListGroup.Item>
+            <ListGroup.Item className="skill-item">React</ListGroup.Item>
+            <ListGroup.Item className="skill-item">Node.js</ListGroup.Item>
+            <ListGroup.Item className="skill-item">Express</ListGroup.Item>
+            <ListGroup.Item className="skill-item">MongoDB</ListGroup.Item>
           </ListGroup>
         </Container>
       </main>
-
       <footer className="footer-custom py-4 mt-5">
         <Container>
           <div className="text-center">
