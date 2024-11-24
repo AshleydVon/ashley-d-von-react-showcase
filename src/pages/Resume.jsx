@@ -2,6 +2,8 @@ import React from 'react';
 import { Container, ListGroup, Button, Navbar, Nav } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../index.css';
+import columbiaCertificate from '../assets/images/Columbia_University_Full_Stack_Certificate.png';
+import courseraCertificate from '../assets/images/Coursera_Introduction_to_Mobile_App_Development_Certificate.png';
 
 function Resume() {
   const openResume = () => {
@@ -34,7 +36,7 @@ function Resume() {
             style={{
               backgroundColor: 'var(--neon-purple)',
               borderColor: 'var(--bright-blue)',
-              marginBottom: '2rem'
+              marginBottom: '2rem',
             }}
           >
             View Resume
@@ -49,6 +51,37 @@ function Resume() {
             <ListGroup.Item className="skill-item">Express</ListGroup.Item>
             <ListGroup.Item className="skill-item">MongoDB</ListGroup.Item>
           </ListGroup>
+
+          {/* Certificates Section */}
+          <div className="certificate-section mt-5">
+            <h3 className="section-title">Certificates</h3>
+            <div className="certificate-container">
+              {/* Columbia Certificate */}
+              <div className="certificate-card">
+                <img
+                  src={columbiaCertificate}
+                  alt="Columbia University Full-Stack Certificate"
+                  className="certificate-img"
+                />
+                <h4 className="certificate-title">Columbia University Full-Stack Bootcamp</h4>
+                <p className="certificate-description">
+                  Successfully completed a full-stack web development bootcamp.
+                </p>
+              </div>
+              {/* Coursera Certificate */}
+              <div className="certificate-card">
+                <img
+                  src={courseraCertificate}
+                  alt="Coursera Mobile App Development Certificate"
+                  className="certificate-img"
+                />
+                <h4 className="certificate-title">Coursera Introduction to Mobile App Development</h4>
+                <p className="certificate-description">
+                  Completed the course with 100%, showcasing foundational mobile development skills.
+                </p>
+              </div>
+            </div>
+          </div>
         </Container>
       </main>
       <footer className="footer-custom py-4 mt-5">
@@ -57,10 +90,18 @@ function Resume() {
             <p>Connect with me:</p>
             <ul className="list-unstyled">
               <li>
-                <a href="https://github.com/AshleydVon" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://github.com/AshleydVon" target="_blank" rel="noopener noreferrer">
+                  GitHub
+                </a>
               </li>
               <li>
-                <a href="https://www.linkedin.com/in/ashley-von-0600a9239/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a
+                  href="https://www.linkedin.com/in/ashley-von-0600a9239/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  LinkedIn
+                </a>
               </li>
               <li>
                 <a href="mailto:AshleydVon630@gmail.com">Email: AshleydVon630@gmail.com</a>

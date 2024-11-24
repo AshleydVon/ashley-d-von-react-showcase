@@ -1,4 +1,3 @@
-/* index.css FULL FILE */
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
 
@@ -37,7 +36,6 @@ h1, h2, h3, .navbar-brand {
   min-height: 100vh;
   background-color: var(--background-color);
 }
-
 /* Page Containers */
 .page-container,
 .home-page,
@@ -105,7 +103,6 @@ h1, h2, h3, .navbar-brand {
 .hero-content {
   max-width: 600px;
 }
-
 .welcome-title {
   font-size: 2.5rem;
   margin: 0;
@@ -131,7 +128,138 @@ main {
   padding: 4rem 0;
   flex-grow: 1;
 }
+/* Certificates Section */
+.certificate-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 2rem;
+  background-color: var(--card-color);
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
 
+.certificate-card {
+  background-color: var(--card-color);
+  border: 1px solid var(--secondary-color);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.certificate-card img {
+  max-width: 100%;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.certificate-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(124, 58, 237, 0.3);
+}
+
+.certificate-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.certificate-description {
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+/* Download PDF Button */
+.certificate-card .download-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 15px;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  font-size: 0.9rem;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.certificate-card .download-btn:hover {
+  background-color: var(--accent-color);
+  transform: translateY(-2px);
+}
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .certificate-container {
+    grid-template-columns: 1fr;
+  }
+  .certificate-card {
+    padding: 1rem;
+  }
+  .certificate-title {
+    font-size: 1rem;
+  }
+  .certificate-description {
+    font-size: 0.8rem;
+  }
+  .certificate-card .download-btn {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .certificate-card .download-btn {
+    font-size: 0.7rem;
+    padding: 5px 10px;
+  }
+}
+/* Footer Section */
+.footer-custom {
+  background-color: var(--background-color);
+  padding: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.footer-custom ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-custom ul li {
+  margin: 0.5rem;
+}
+
+.footer-custom a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.footer-custom a:hover {
+  color: var(--accent-color);
+}
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
 /* About Section */
 .about-card {
   background-color: var(--background-color);
@@ -149,306 +277,6 @@ main {
   transition: all 0.3s ease;
 }
 
-.about-card .section-title:hover {
-  color: var(--accent-color) !important;
-  transform: scale(1.05);
-}
-
-.image-wrapper {
-  display: flex;
-  justify-content: center;
-  padding: 1rem;
-}
-
-.personal-image {
-  max-width: 400px;
-  width: 400px;
-  height: 400px;
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 0 15px var(--secondary-color);
-  transition: all 0.3s ease; /* Changed from just transform to all */
-  padding: 8px; /* Added padding to create space for the glow effect */
-  border: 2px solid transparent; /* Added transparent border */
-}
-
-.personal-image:hover {
-  transform: scale(1.02);
-  border-color: var(--accent-color); /* Border becomes visible on hover */
-  box-shadow: 0 0 20px var(--accent-color); /* Teal glow effect */
-  filter: drop-shadow(0 0 8px var(--accent-color)); /* Additional glow */
-}
-
-.about-text {
-  color: var(--text-color);
-  font-size: 1.3rem;
-  line-height: 1.8;
-  text-shadow: none;
-  padding: 1.5rem;
-  letter-spacing: 0.02em;
-  background-color: var(--background-color);
-  border-radius: 8px;
-  margin: 0.5rem 0;
-  transition: all 0.3s ease;
-}
-
-.about-text:hover {
-  color: var(--accent-color);
-}
-
-/* Projects Hero Section */
-.projects-hero {
-  background-color: var(--primary-color);
-  padding: 3rem 1rem;
-  text-align: center;
-}
-
-/* Title and Subheading Container */
-.projects-hero-content {
-  margin-bottom: 2rem;
-}
-
-/* Title Styling */
-.projects-hero .section-title,
-.skills-hero .section-title,
-.contact-hero .section-title,
-.resume-hero .section-title {
-  font-size: 2.5rem;
-  color: var(--text-color) !important;
-  text-align: center;
-  margin-bottom: 1.5rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  transition: all 0.3s ease;
-}
-
-.projects-hero .section-title:hover,
-.skills-hero .section-title:hover,
-.contact-hero .section-title:hover,
-.resume-hero .section-title:hover {
-  color: var(--accent-color) !important;
-  transform: scale(1.05);
-}
-
-/* Main content section titles */
-.home-main .section-title,
-.projects-main .section-title,
-.skills-main .section-title {
-  color: var(--secondary-color) !important;
-}
-
-/* Resume and Contact section titles */
-.resume-content .section-title,
-.contact .section-title {
-  color: var(--text-color) !important;
-  transition: all 0.3s ease;
-}
-
-.resume-content .section-title:hover,
-.contact .section-title:hover {
-  color: var(--accent-color) !important;
-  transform: scale(1.05);
-}
-
-/* Subheading Styling */
-.projects-hero-content p {
-  font-size: 1.2rem;
-  color: var(--text-color);
-  margin-top: 0.5rem;
-  line-height: 1.4;
-}
-
-/* Projects Styles */
-.project-card {
-  background-color: var(--card-color) !important;
-  border: 1px solid var(--secondary-color) !important;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin-bottom: 3rem;
-  color: var(--text-color);
-  padding: 1.5rem;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(124, 58, 237, 0.2);
-}
-
-.project-title {
-  color: var(--text-color) !important;
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-  transition: all 0.3s ease;
-  text-align: center;
-}
-
-.project-card:hover .project-title {
-  color: var(--accent-color) !important;
-  transform: scale(1.05);
-}
-
-.project-card .card-text,
-.project-card .technologies {
-  color: var(--text-color) !important;
-}
-
-/* Skills Hero Section */
-.skills-hero {
-  background-color: var(--primary-color);
-  padding: 3rem 1rem;
-  text-align: center;
-}
-
-.skills-hero-content {
-  margin-bottom: 2rem;
-}
-
-
-:root {
-    --primary-color: #6548AF;
-    --secondary-color: #8B5CF6;
-    --accent-color: #38BDF8;
-    --background-color: #1F2937;
-    --text-color: #F9FAFB;
-    --card-color: #374151;
-}
-
-/* Base Styles */
-body {
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-color);
-}
-
-h1, h2, h3, .navbar-brand {
-    font-family: 'Lobster', cursive;
-    color: var(--text-color);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.section-title {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-    text-align: center;
-}
-
-#root {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: var(--background-color);
-}
-
-/* Page Containers */
-.page-container,
-.home-page,
-.projects-page,
-.skills-page {
-    animation: fadeIn 1s ease-in-out;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    background-color: var(--background-color);
-}
-
-/* Navbar Styles */
-.navbar-custom {
-    background-color: var(--primary-color) !important;
-    padding: 1rem 0;
-    display: flex;
-    align-items: center;
-}
-
-.navbar-custom .navbar-brand,
-.navbar-custom .nav-link {
-    color: var(--text-color) !important;
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
-    margin-right: 1rem;
-}
-
-.navbar-custom .nav-link:hover {
-    color: var(--accent-color) !important;
-    text-decoration: underline;
-}
-
-.navbar-custom .navbar-toggler {
-    border-color: var(--text-color);
-}
-
-.navbar-brand {
-    font-size: 2rem;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    margin-right: auto;
-}
-
-/* Hero Section */
-.hero {
-    background-color: var(--primary-color);
-    padding: 2rem 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    min-height: 25vh;
-}
-
-.hero .logo {
-    max-width: 100px;
-    animation: float 3s ease-in-out infinite;
-    margin-bottom: 1rem;
-    transform: rotate(-15deg);
-}
-
-.hero-content {
-    max-width: 600px;
-}
-
-.welcome-title {
-    font-size: 2.5rem;
-    margin: 0;
-    color: var(--text-color);
-    transition: all 0.3s ease;
-}
-
-.welcome-title:hover {
-    color: var(--accent-color) !important;
-    transform: scale(1.05);
-}
-
-.hero-text {
-    font-size: 1rem;
-    color: var(--text-color);
-    line-height: 1.4;
-    margin-top: 0.5rem;
-}
-
-/* Main Content */
-main {
-    background-color: var(--background-color);
-    padding: 4rem 0;
-    flex-grow: 1;
-}
-
-/* About Section */
-.about-card {
-    background-color: var(--background-color);
-    border: none;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 0 20px rgba(124, 58, 237, 0.3);
-    margin: 2rem 0;
-    width: 100%;
-    padding: 2rem;
-}
-
-.about-card .section-title {
-    color: var(--text-color) !important;
-    transition: all 0.3s ease;
-}
 .about-card .section-title:hover {
   color: var(--accent-color) !important;
   transform: scale(1.05);
@@ -495,7 +323,6 @@ main {
 .about-text:hover {
   color: var(--accent-color);
 }
-
 /* Projects Hero Section */
 .projects-hero {
   background-color: var(--primary-color);
@@ -528,7 +355,6 @@ main {
   color: var(--accent-color) !important;
   transform: scale(1.05);
 }
-
 /* Main content section titles */
 .home-main .section-title,
 .projects-main .section-title,
@@ -556,7 +382,6 @@ main {
   margin-top: 0.5rem;
   line-height: 1.4;
 }
-
 /* Projects Styles */
 .project-card {
   background-color: var(--card-color) !important;
@@ -590,7 +415,6 @@ main {
 .project-card .technologies {
   color: var(--text-color) !important;
 }
-
 /* Skills Hero Section */
 .skills-hero {
   background-color: var(--primary-color);
@@ -643,7 +467,6 @@ main {
   color: var(--accent-color) !important;
   transform: scale(1.05);
 }
-
 /* New styles for skill items */
 .skill-item {
   background-color: var(--card-color) !important;
@@ -681,7 +504,6 @@ main {
   transform: translateY(-3px);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
 /* Footer */
 .footer-custom a:hover {
   color: var(--secondary-color);
@@ -702,30 +524,234 @@ label {
   color: var(--text-color);
 }
 
-/* Animations */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+/* Debugging Grid Layout */
+.debug-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  border: 2px solid var(--secondary-color);
 }
 
-@keyframes float {
-  0% { transform: translateY(0px) rotate(-25deg); }
-  25% { transform: translateY(-10px) rotate(-25deg); }
-  50% { transform: translateY(-20px) rotate(-25deg); }
-  75% { transform: translateY(-10px) rotate(-25deg); }
-  100% { transform: translateY(0px) rotate(-25deg); }
+.debug-grid div {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 10px;
+  border: 1px solid var(--accent-color);
+}
+/* Certificates Section Shadow Effect */
+.certificate-container {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
 }
 
-/* Responsive Styles */
+.certificate-container:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Animations for Certificates Section */
+.certificate-card img {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.certificate-card img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+/* Certificate Section Title Adjustments */
+.certificate-container h3.section-title {
+  margin-bottom: 1.5rem;
+  color: var(--secondary-color);
+}
+
+/* Hero Content Responsive Adjustments */
+@media (max-width: 1024px) {
+  .hero-content {
+    padding: 2rem;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  .certificate-card img {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+/* Certificate Section - Final Styling Tweaks */
+.certificate-container {
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.certificate-card {
+  position: relative;
+  overflow: hidden;
+  background: var(--background-color);
+}
+
+.certificate-card:hover::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  mix-blend-mode: lighten;
+  transition: opacity 0.3s ease;
+}
+
+.certificate-card:hover {
+  border: 1px solid var(--accent-color);
+}
+/* Footer Customization */
+.footer-custom {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.footer-custom ul {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-custom ul li {
+  margin: 0 1rem;
+}
+
+/* Debug Section for Layout Testing */
+.debug-box {
+  display: inline-block;
+  padding: 10px;
+  border: 2px dashed var(--secondary-color);
+  color: var(--text-color);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.debug-box:hover {
+  background-color: var(--accent-color);
+  color: var(--background-color);
+}
+/* Responsive Adjustments for Certificates */
 @media (max-width: 768px) {
-  .welcome-title {
-      font-size: 2rem;
+  .certificate-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
   }
-  .hero-text {
-      font-size: 0.9rem;
+
+  .certificate-card {
+    margin-bottom: 1rem;
   }
-  .project-card,
+
+  .certificate-card img {
+    max-width: 150px;
+  }
+}
+
+/* General Responsive Tweaks */
+@media (max-width: 576px) {
+  .hero-content {
+    font-size: 1rem;
+  }
+
+  .projects-hero {
+    padding: 1rem;
+  }
+
   .skills-card {
-      margin: 0.5rem 0;
+    font-size: 0.9rem;
   }
+
+  .footer-custom {
+    padding: 1rem;
+  }
+
+  .certificate-container {
+    grid-template-columns: 1fr;
+  }
+}
+/* Proficiency List Responsive Styling */
+.list-group-item {
+  padding: 10px 20px;
+  font-size: 1rem;
+  text-align: center;
+  background: var(--card-color);
+}
+
+.list-group-item:hover {
+  background: var(--secondary-color);
+  color: var(--text-color);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Final Animation Additions */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-element {
+  animation: fadeInUp 1s ease-in-out;
+}
+/* Subheading Styling for Smaller Screens */
+.section-title {
+  font-size: 1.8rem;
+  text-align: center;
+  color: var(--text-color);
+}
+
+.section-title:hover {
+  color: var(--accent-color);
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* More Adjustments for Mobile View */
+@media (max-width: 400px) {
+  .certificate-title {
+    font-size: 0.9rem;
+  }
+
+  .certificate-description {
+    font-size: 0.7rem;
+  }
+
+  .footer-custom {
+    font-size: 0.8rem;
+  }
+
+  .list-group-item {
+    font-size: 0.85rem;
+  }
+
+  .hero-content {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+}
+/* Certificates Animation */
+.certificate-card img {
+  animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes hoverGlow {
+  0% {
+    box-shadow: 0 0 0px rgba(0, 0, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 10px var(--accent-color);
+  }
+  100% {
+    box-shadow: 0 0 0px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.certificate-card:hover {
+  animation: hoverGlow 1.5s infinite ease-in-out;
 }
