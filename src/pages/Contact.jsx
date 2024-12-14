@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Form, Button, Alert, Navbar, Nav } from 'react-bootstrap';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { MdEmail } from 'react-icons/md';
 
 function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -41,11 +43,11 @@ function Contact() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
             <Nav className="ms-auto">
-              <Nav.Link href="/">Home</Nav.Link>
-              <Nav.Link href="/projects">Projects</Nav.Link>
-              <Nav.Link href="/skills">Skills</Nav.Link>
-              <Nav.Link href="/contact">Contact</Nav.Link>
-              <Nav.Link href="/resume">Resume</Nav.Link>
+              <Nav.Link href="/" className="nav-button">Home</Nav.Link>
+              <Nav.Link href="/projects" className="nav-button">Projects</Nav.Link>
+              <Nav.Link href="/skills" className="nav-button">Skills</Nav.Link>
+              <Nav.Link href="/contact" className="nav-button">Contact</Nav.Link>
+              <Nav.Link href="/resume" className="nav-button">Resume</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
@@ -99,10 +101,22 @@ function Contact() {
         <Container>
           <div className="text-center">
             <p>Connect with me:</p>
-            <ul className="list-unstyled">
-              <li><a href="https://github.com/AshleydVon" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-              <li><a href="https://www.linkedin.com/in/ashley-von-0600a9239/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-              <li><a href="mailto:AshleydVon630@gmail.com">Email: AshleydVon630@gmail.com</a></li>
+            <ul className="social-links">
+              <li>
+                <a href="https://github.com/AshleydVon" target="_blank" rel="noopener noreferrer">
+                  <FaGithub className="social-icon" /> GitHub
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/ashley-von-0600a9239/" target="_blank" rel="noopener noreferrer">
+                  <FaLinkedin className="social-icon" /> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="mailto:AshleydVon630@gmail.com">
+                  <MdEmail className="social-icon" /> Email: AshleydVon630@gmail.com
+                </a>
+              </li>
             </ul>
           </div>
         </Container>

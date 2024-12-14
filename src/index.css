@@ -81,27 +81,50 @@ h1, h2, h3, .navbar-brand {
   margin-right: auto;
 }
 
+/* Nav Button Styles - New Addition */
+.nav-button {
+  background: var(--primary-color);
+  border: 2px solid var(--accent-color);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  color: var(--text-color) !important;
+  transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+  background: var(--accent-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(56, 189, 248, 0.3);
+}
 /* Hero Section */
 .hero {
   background-color: var(--primary-color);
   padding: 2rem 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  position: relative;
   min-height: 25vh;
 }
 
 .hero .logo {
-  max-width: 100px;
+  position: absolute;
+  left: 30%;
+  top: 15%; /* Moved from 5% to 15% to shift down */
+  transform: translateY(-50%);
+  max-width: 200px;
   animation: float 3s ease-in-out infinite;
-  margin-bottom: 1rem;
-  transform: rotate(-15deg);
+  opacity: 0.8;
+  z-index: 1;
+  rotate: -25deg;
 }
 
 .hero-content {
   max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-left: 35%;
+  padding-top: 80px;
+  position: relative;
+  z-index: 2;
 }
 .welcome-title {
   font-size: 2.5rem;
@@ -171,7 +194,6 @@ main {
   font-size: 0.9rem;
   color: var(--text-color);
 }
-
 /* Download PDF Button */
 .certificate-card .download-btn {
   display: inline-block;
@@ -190,6 +212,7 @@ main {
   background-color: var(--accent-color);
   transform: translateY(-2px);
 }
+
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .certificate-container {
@@ -242,6 +265,20 @@ main {
 .footer-custom a:hover {
   color: var(--accent-color);
 }
+
+/* Social Icons Styling */
+.social-icon {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover .social-icon {
+  transform: scale(1.2);
+  color: var(--accent-color);
+}
+
 /* Animations */
 @keyframes fadeIn {
   from {
@@ -260,6 +297,7 @@ main {
     transform: translateY(-10px);
   }
 }
+
 /* About Section */
 .about-card {
   background-color: var(--background-color);
@@ -267,14 +305,18 @@ main {
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 0 20px rgba(124, 58, 237, 0.3);
-  margin: 2rem 0;
+  margin: 2rem auto;  /* Changed to auto for horizontal centering */
   width: 100%;
   padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .about-card .section-title {
   color: var(--text-color) !important;
   transition: all 0.3s ease;
+  text-align: center;  /* Added for title centering */
 }
 
 .about-card .section-title:hover {
@@ -318,11 +360,21 @@ main {
   border-radius: 8px;
   margin: 0.5rem 0;
   transition: all 0.3s ease;
+  text-align: center;  /* Added for text centering */
 }
 
 .about-text:hover {
   color: var(--accent-color);
 }
+
+/* Added for better column alignment */
+.content-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
 /* Projects Hero Section */
 .projects-hero {
   background-color: var(--primary-color);
@@ -347,7 +399,6 @@ main {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   transition: all 0.3s ease;
 }
-
 .projects-hero .section-title:hover,
 .skills-hero .section-title:hover,
 .contact-hero .section-title:hover,
@@ -355,6 +406,7 @@ main {
   color: var(--accent-color) !important;
   transform: scale(1.05);
 }
+
 /* Main content section titles */
 .home-main .section-title,
 .projects-main .section-title,
@@ -450,7 +502,6 @@ main {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
-
 .skills-card-header {
   background-color: var(--secondary-color) !important;
   color: var(--text-color) !important;
@@ -467,6 +518,7 @@ main {
   color: var(--accent-color) !important;
   transform: scale(1.05);
 }
+
 /* New styles for skill items */
 .skill-item {
   background-color: var(--card-color) !important;
@@ -484,7 +536,6 @@ main {
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
 .list-group-item {
   background-color: var(--card-color) !important;
   color: var(--text-color) !important;
@@ -504,6 +555,7 @@ main {
   transform: translateY(-3px);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 /* Footer */
 .footer-custom a:hover {
   color: var(--secondary-color);
@@ -519,7 +571,6 @@ main {
 .footer-custom ul li {
   margin: 0.5rem 0;
 }
-
 label {
   color: var(--text-color);
 }
@@ -538,6 +589,7 @@ label {
   padding: 10px;
   border: 1px solid var(--accent-color);
 }
+
 /* Certificates Section Shadow Effect */
 .certificate-container {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -552,11 +604,11 @@ label {
 .certificate-card img {
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
-
 .certificate-card img:hover {
   transform: scale(1.05);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
 }
+
 /* Certificate Section Title Adjustments */
 .certificate-container h3.section-title {
   margin-bottom: 1.5rem;
@@ -582,7 +634,6 @@ label {
   margin-top: 20px;
   padding: 20px;
 }
-
 .certificate-card {
   position: relative;
   overflow: hidden;
@@ -604,6 +655,7 @@ label {
 .certificate-card:hover {
   border: 1px solid var(--accent-color);
 }
+
 /* Footer Customization */
 .footer-custom {
   padding: 2rem 1rem;
@@ -618,7 +670,6 @@ label {
 .footer-custom ul li {
   margin: 0 1rem;
 }
-
 /* Debug Section for Layout Testing */
 .debug-box {
   display: inline-block;
@@ -632,6 +683,7 @@ label {
   background-color: var(--accent-color);
   color: var(--background-color);
 }
+
 /* Responsive Adjustments for Certificates */
 @media (max-width: 768px) {
   .certificate-container {
@@ -648,7 +700,6 @@ label {
     max-width: 150px;
   }
 }
-
 /* General Responsive Tweaks */
 @media (max-width: 576px) {
   .hero-content {
@@ -671,6 +722,7 @@ label {
     grid-template-columns: 1fr;
   }
 }
+
 /* Proficiency List Responsive Styling */
 .list-group-item {
   padding: 10px 20px;
@@ -684,7 +736,6 @@ label {
   color: var(--text-color);
   transition: background 0.3s ease, color 0.3s ease;
 }
-
 /* Final Animation Additions */
 @keyframes fadeInUp {
   from {
@@ -700,6 +751,7 @@ label {
 .fade-in-element {
   animation: fadeInUp 1s ease-in-out;
 }
+
 /* Subheading Styling for Smaller Screens */
 .section-title {
   font-size: 1.8rem;
@@ -711,7 +763,6 @@ label {
   color: var(--accent-color);
   text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
-
 /* More Adjustments for Mobile View */
 @media (max-width: 400px) {
   .certificate-title {
@@ -735,6 +786,7 @@ label {
     font-size: 0.9rem;
   }
 }
+
 /* Certificates Animation */
 .certificate-card img {
   animation: fadeInUp 1s ease-in-out;

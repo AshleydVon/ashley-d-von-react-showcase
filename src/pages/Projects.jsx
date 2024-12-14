@@ -1,5 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Card, Button, Navbar, Nav } from 'react-bootstrap';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { MdEmail } from 'react-icons/md';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Projects() {
@@ -77,22 +79,22 @@ function Projects() {
 
   return (
     <div className="projects-page">
-      {/* Navbar */}
       <Navbar expand="lg" className="navbar-custom">
         <Container>
           <Navbar.Brand href="/">Ashley D Von</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link href="/">Home</Nav.Link>
-              <Nav.Link href="/projects">Projects</Nav.Link>
-              <Nav.Link href="/skills">Skills</Nav.Link>
+              <Nav.Link href="/" className="nav-button">Home</Nav.Link>
+              <Nav.Link href="/projects" className="nav-button">Projects</Nav.Link>
+              <Nav.Link href="/skills" className="nav-button">Skills</Nav.Link>
+              <Nav.Link href="/contact" className="nav-button">Contact</Nav.Link>
+              <Nav.Link href="/resume" className="nav-button">Resume</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
 
-      {/* Hero Section */}
       <header className="projects-hero">
         <Container>
           <div className="projects-hero-content text-center">
@@ -102,7 +104,6 @@ function Projects() {
         </Container>
       </header>
 
-      {/* Projects List */}
       <main className="projects-main">
         <Container>
           <Row xs={1} md={2} lg={3} className="g-4">
@@ -144,20 +145,19 @@ function Projects() {
         </Container>
       </main>
 
-      {/* Footer */}
       <footer className="footer-custom">
         <Container>
           <Row>
             <Col className="text-center">
               <p>Connect with me:</p>
-              <ul className="list-unstyled">
+              <ul className="social-links">
                 <li>
                   <a
                     href="https://github.com/AshleydVon"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    GitHub
+                    <FaGithub className="social-icon" /> GitHub
                   </a>
                 </li>
                 <li>
@@ -166,12 +166,12 @@ function Projects() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    LinkedIn
+                    <FaLinkedin className="social-icon" /> LinkedIn
                   </a>
                 </li>
                 <li>
                   <a href="mailto:AshleydVon630@gmail.com">
-                    Email: AshleydVon630@gmail.com
+                    <MdEmail className="social-icon" /> Email: AshleydVon630@gmail.com
                   </a>
                 </li>
               </ul>
@@ -182,6 +182,5 @@ function Projects() {
     </div>
   );
 }
-
 
 export default Projects;

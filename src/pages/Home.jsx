@@ -2,6 +2,8 @@ import React from 'react';
 import personalImage from '../assets/images/Pic.jpeg';
 import logo from '../assets/images/Logo.png';
 import { Container, Row, Col, Navbar, Nav, Card } from 'react-bootstrap';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { MdEmail } from 'react-icons/md';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Home() {
@@ -13,17 +15,16 @@ function Home() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link href="/">Home</Nav.Link>
-              <Nav.Link href="/projects">Projects</Nav.Link>
-              <Nav.Link href="/skills">Skills</Nav.Link>
-              <Nav.Link href="/contact">Contact</Nav.Link>
-              <Nav.Link href="/resume">Resume</Nav.Link>
+              <Nav.Link href="/" className="nav-button">Home</Nav.Link>
+              <Nav.Link href="/projects" className="nav-button">Projects</Nav.Link>
+              <Nav.Link href="/skills" className="nav-button">Skills</Nav.Link>
+              <Nav.Link href="/contact" className="nav-button">Contact</Nav.Link>
+              <Nav.Link href="/resume" className="nav-button">Resume</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
 
-      {/* Hero Section */}
       <div className="hero">
         <Container className="text-center d-flex flex-column align-items-center">
           <img src={logo} alt="Logo" className="logo animated-logo mb-3" />
@@ -39,7 +40,6 @@ function Home() {
         </Container>
       </div>
 
-      {/* Main Content */}
       <main className="home-main">
         <Container>
           <Card className="about-card">
@@ -74,7 +74,6 @@ function Home() {
         </Container>
       </main>
 
-      {/* Footer */}
       <footer className="footer-custom">
         <Container>
           <Row>
@@ -87,7 +86,7 @@ function Home() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    GitHub
+                    <FaGithub className="social-icon" /> GitHub
                   </a>
                 </li>
                 <li>
@@ -96,12 +95,12 @@ function Home() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    LinkedIn
+                    <FaLinkedin className="social-icon" /> LinkedIn
                   </a>
                 </li>
                 <li>
                   <a href="mailto:AshleydVon630@gmail.com">
-                    Email: AshleydVon630@gmail.com
+                    <MdEmail className="social-icon" /> Email: AshleydVon630@gmail.com
                   </a>
                 </li>
               </ul>
