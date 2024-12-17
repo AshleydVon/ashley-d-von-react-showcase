@@ -807,3 +807,156 @@ label {
 .certificate-card:hover {
   animation: hoverGlow 1.5s infinite ease-in-out;
 }
+/* Project Card Image Gallery */
+.screenshot-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.screenshot-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.screenshot-item img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.screenshot-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(124, 58, 237, 0.3);
+}
+
+.screenshot-item p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: var(--text-color);
+  margin: 0;
+  padding: 5px;
+  font-size: 0.8rem;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.screenshot-item:hover p {
+  opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .screenshot-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .screenshot-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+/* Tech Stack Showcase Styling */
+.tech-stack-showcase {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+}
+
+.tech-icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tech-icon {
+  font-size: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.tech-icon:hover {
+  transform: scale(1.2);
+}
+
+/* Specific icon colors */
+.tech-icon.react { color: #61DAFB; }
+.tech-icon.apollo { color: #311C87; }
+.tech-icon.graphql { color: #E535AB; }
+.tech-icon.mongodb { color: #47A248; }
+.tech-icon.node { color: #339933; }
+.tech-icon.express { color: #000000; }
+
+/* Code Preview Styling */
+.code-preview {
+  background: #1E1E1E;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  overflow-x: auto;
+}
+
+.code-preview pre {
+  margin: 0;
+}
+
+.code-preview code {
+  color: #D4D4D4;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+/* DataVault-C Specific Styles */
+.tech-icon.c { color: #5C6BC0; }
+.tech-icon.database { color: #FFA726; }
+
+/* Memory Management Diagram */
+.memory-diagram {
+  background: #1E1E1E;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+  border: 1px solid #5C6BC0;
+}
+
+/* Performance Metrics */
+.metrics-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.metric-card {
+  background: var(--card-color);
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid #FFA726;
+}
+
+/* Code Preview Enhancements */
+.code-preview code {
+  font-family: 'Fira Code', monospace;
+  color: #E0E0E0;
+}
+
+.code-preview .keyword { color: #C792EA; }
+.code-preview .type { color: #82AAFF; }
+.code-preview .function { color: #FFE082; }
