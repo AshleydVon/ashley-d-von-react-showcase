@@ -960,3 +960,17 @@ label {
 .code-preview .keyword { color: #C792EA; }
 .code-preview .type { color: #82AAFF; }
 .code-preview .function { color: #FFE082; }
+
+.resume .proficiencies-section {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+  gap: 4rem !important;
+  max-width: 1200px !important;
+  margin: 2rem auto !important;
+}
+
+.resume .proficiency-category {
+  flex: 0 1 calc(50% - 2rem) !important;
+  margin: 0 !important;
+}

@@ -7,10 +7,12 @@ import '../index.css';
 import columbiaCertificate from '../assets/images/Columbia_University_Full_Stack_Certificate.png';
 import courseraCertificate from '../assets/images/Coursera_Introduction_to_Mobile_App_Development_Certificate.png';
 
+
 function Resume() {
   const openResume = () => {
     window.open('https://bold.pro/my/ashley-d-von-resume', '_blank');
   };
+
 
   return (
     <div className="resume page-container">
@@ -43,16 +45,52 @@ function Resume() {
           >
             View Resume
           </Button>
-          <h3 className="section-title mt-4">Proficiencies</h3>
-          <ListGroup>
-            <ListGroup.Item className="skill-item">HTML</ListGroup.Item>
-            <ListGroup.Item className="skill-item">CSS (Bootstrap, Tailwind)</ListGroup.Item>
-            <ListGroup.Item className="skill-item">JavaScript (ES6+)</ListGroup.Item>
-            <ListGroup.Item className="skill-item">React</ListGroup.Item>
-            <ListGroup.Item className="skill-item">Node.js</ListGroup.Item>
-            <ListGroup.Item className="skill-item">Express</ListGroup.Item>
-            <ListGroup.Item className="skill-item">MongoDB</ListGroup.Item>
-          </ListGroup>
+
+
+          <div className="proficiencies-section">
+  <h3 className="section-title mt-4">Proficiencies</h3>
+  
+  <div className="proficiency-category">
+    <h4>Technical Skills</h4>
+    <ListGroup>
+      <ListGroup.Item className="skill-item">React/Redux Development</ListGroup.Item>
+      <ListGroup.Item className="skill-item">Full Stack MERN Applications</ListGroup.Item>
+      <ListGroup.Item className="skill-item">RESTful API Architecture</ListGroup.Item>
+      <ListGroup.Item className="skill-item">GraphQL/Apollo Integration</ListGroup.Item>
+      <ListGroup.Item className="skill-item">Database Design & Management</ListGroup.Item>
+      <ListGroup.Item className="skill-item">Authentication Systems</ListGroup.Item>
+      <ListGroup.Item className="skill-item">Responsive Web Design</ListGroup.Item>
+      <ListGroup.Item className="skill-item">Progressive Web Apps</ListGroup.Item>
+      <ListGroup.Item className="skill-item">Version Control/Git</ListGroup.Item>
+      <ListGroup.Item className="skill-item">CI/CD Implementation</ListGroup.Item>
+      <ListGroup.Item className="skill-item">Cloud Deployment</ListGroup.Item>
+      <ListGroup.Item className="skill-item">Testing & Debugging</ListGroup.Item>
+      <ListGroup.Item className="skill-item">Performance Optimization</ListGroup.Item>
+      <ListGroup.Item className="skill-item">Security Best Practices</ListGroup.Item>
+    </ListGroup>
+  </div>
+
+  <div className="proficiency-category">
+    <h4>Professional Skills</h4>
+    <ListGroup>
+      <ListGroup.Item className="skill-item">Project Architecture</ListGroup.Item>
+      <ListGroup.Item className="skill-item">Technical Documentation</ListGroup.Item>
+      <ListGroup.Item className="skill-item">Agile Development</ListGroup.Item>
+      <ListGroup.Item className="skill-item">Problem-Solving</ListGroup.Item>
+      <ListGroup.Item className="skill-item">Code Review</ListGroup.Item>
+      <ListGroup.Item className="skill-item">Team Collaboration</ListGroup.Item>
+      <ListGroup.Item className="skill-item">Operations Management</ListGroup.Item>
+      <ListGroup.Item className="skill-item">Direct Team Management & Supervision</ListGroup.Item>
+<ListGroup.Item className="skill-item">Strategic Planning</ListGroup.Item>
+      <ListGroup.Item className="skill-item">Quality Assurance</ListGroup.Item>
+      <ListGroup.Item className="skill-item">Resource Optimization</ListGroup.Item>
+      <ListGroup.Item className="skill-item">Client Relations</ListGroup.Item>
+      <ListGroup.Item className="skill-item">Continuous Learning</ListGroup.Item>
+      <ListGroup.Item className="skill-item">Innovation Focus</ListGroup.Item>
+    </ListGroup>
+  </div>
+</div>
+
 
           {/* Certificates Section */}
           <div className="certificate-section mt-5">
@@ -86,6 +124,8 @@ function Resume() {
           </div>
         </Container>
       </main>
+
+
       <footer className="footer-custom py-4 mt-5">
         <Container>
           <div className="text-center">
@@ -113,5 +153,6 @@ function Resume() {
     </div>
   );
 }
+
 
 export default Resume;
